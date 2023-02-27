@@ -15,5 +15,4 @@ function getData() {
 
 // вызываем функцию для получения данных
 console.log(response);
-console.log(chartData);
 getData();
