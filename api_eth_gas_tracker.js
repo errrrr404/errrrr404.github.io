@@ -4,6 +4,7 @@ function getData() {
   const apiUrl = `https://api.etherscan.io/api?module=account&action=balance&address=0x4Fe42dFC900EED12A1cD9060d726f41F4495d970&tag=latest&apikey=${apiKey}`;
 
   // используем fetch для получения данных из API
+  console.log("Starting API request");
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -14,4 +15,5 @@ function getData() {
 }
 
 // вызываем функцию для получения данных
+console.log(response);
 getData();
