@@ -1,7 +1,7 @@
 // создаем функцию для получения данных с API etherscan.io
 function getData() {
   const apiKey = WWXFQY5ZXRRUMJ9PRA9TTR7SI7ANGA9JYJ; // здесь нужно вставить ваш API ключ etherscan.io
-  const apiUrl = `https://api.etherscan.io/api?module=account&action=balance&address=0x4Fe42dFC900EED12A1cD9060d726f41F4495d970&tag=latest&apikey=${WWXFQY5ZXRRUMJ9PRA9TTR7SI7ANGA9JYJ}`;
+  const apiUrl = `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=WWXFQY5ZXRRUMJ9PRA9TTR7SI7ANGA9JYJ;
 
   // используем fetch для получения данных из API
 fetch(apiUrl)
