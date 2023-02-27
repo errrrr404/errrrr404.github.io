@@ -1,9 +1,3 @@
-https://api.etherscan.io/api
-   ?module=gastracker
-   &action=gasoracle
-   &apikey=WWXFQY5ZXRRUMJ9PRA9TTR7SI7ANGA9JYJ 
-
-
 // создаем функцию для получения данных с API etherscan.io
 function getData() {
   const apiKey = "WWXFQY5ZXRRUMJ9PRA9TTR7SI7ANGA9JYJ"; // здесь нужно вставить ваш API ключ etherscan.io
