@@ -7,6 +7,6 @@ const url = `${apiUrl}?module=account&action=balance&address=${address}&tag=late
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    const balance = data.result;
-    console.log(`Balance: ${balance}`);
+    const balanceInGwei = ethers.utils.formatUnits(balance.data.result, 'gwei');
+    console.log(`gwei: ${balanceInGwei}`);
   });
