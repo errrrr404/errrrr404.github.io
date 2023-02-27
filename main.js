@@ -11,4 +11,4 @@ fetch(apiUrl)
     const labels = result.map(record => record.time);
     const prices = result.map(record => record.close);
     drawChart(); // добавить эту строку
-  };
+  }
