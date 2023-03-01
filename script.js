@@ -1,27 +1,14 @@
-function drawChart() {
-  const chartDiv = document.getElementById('chart');
-  const chart = new Chart(chartDiv, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [{
-        label: 'Ether price (USD)',
-        data: prices,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: false
-          }
-        }]
-      }
-    }
-  });
+const walletAddress = "0x4Fe42dFC900EED12A1cD9060d726f41F4495d970";
+const apiKey = "WWXFQY5ZXRRUMJ9PRA9TTR7SI7ANGA9JYJ";
+
+const balanceElement = document.getElementById("balance");
+
+const ethersProvider = new ethers.providers.InfuraProvider("ropsten", apiKey);
+
+async function updateBalance() {
+  const balance = await ethersProvider.getBalance(walletAddress);
+  const balanceInGwei = ethers.utils.formatUnits(balance, 'gwei');
+  balanceElement.innerHTML = balanceInGwei;
 }
+
+updateBalance();
